@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdelrahman Hamed | Flutter Developer</title>
+<meta name="description" content="Abdelrahman Hamed, Flutter developer. Building iOS and Android apps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--ink:#1b2236;--muted:#5d667c;--a:#5b7fa6;--b:#d98ca0;--card:rgba(255,255,255,.78);--line:rgba(27,34,54,.08);--sh:0 10px 30px rgba(40,60,100,.1);--ok:#22c37a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#0f1420;--ink:#eef1f8;--muted:#a2abc0;--a:#8fb0d6;--b:#e9a3b6;--card:rgba(30,37,58,.72);--line:rgba(255,255,255,.1);--sh:0 10px 30px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:var(--card);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{font-weight:800;font-size:22px}.logo span{color:var(--a)}
+#links{display:flex;gap:18px;font-weight:500;font-size:15px;color:var(--muted)}
+#links a{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;flex-shrink:0}
+#links a.on{color:var(--a)}#links svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;box-shadow:var(--sh);cursor:pointer;font-family:inherit;font-size:15px;color:var(--ink);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:var(--a);color:#fff;border-color:transparent}.btn.sm{padding:10px 20px}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:70px;padding-bottom:80px}
+.avail{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:999px;background:var(--card);box-shadow:var(--sh);font-size:14px;font-weight:600}
+.avail i{width:9px;height:9px;border-radius:50%;background:var(--ok);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,195,122,.6)}100%{box-shadow:0 0 0 10px rgba(34,195,122,0)}}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.08;margin:22px 0 10px;font-weight:800;letter-spacing:-.02em}
+.grad{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.typed{font-size:clamp(18px,2.4vw,24px);font-weight:600;color:var(--a);margin:0 0 18px;min-height:36px}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--b);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.bio{color:var(--muted);max-width:520px;margin:0 0 28px}
+.stats{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 20px;box-shadow:var(--sh);min-width:120px}
+.stat b{font-size:28px;font-weight:800}.stat b em{font-style:normal;color:var(--a);font-size:18px}
+.stat span{display:block;font-size:13px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.conn{display:flex;flex-wrap:wrap;gap:20px;margin:26px 0 0;font-weight:600;color:var(--muted)}.conn a:hover{color:var(--a)}
+.visual{position:relative;max-width:420px;margin:0 auto;width:100%}
+.photo{aspect-ratio:1/1.1;border-radius:36px;border:6px solid var(--card);box-shadow:var(--sh);overflow:hidden;display:grid;place-items:center;background:linear-gradient(160deg,var(--a),var(--b));color:#fff;font-size:72px;font-weight:800}
+.photo img{width:100%;height:100%;object-fit:cover}
+.chip{position:absolute;padding:11px 18px;border-radius:999px;background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:var(--sh);font-weight:600;font-size:14px;animation:float 5s ease-in-out infinite;white-space:nowrap}
+.c1{top:8%;left:-8%}.c2{top:20%;right:-6%;animation-delay:-1.5s}.c3{bottom:8%;right:-8%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-10px)}}
+.sec{padding-top:60px;padding-bottom:60px}
+h2{font-size:clamp(28px,4vw,40px);margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 28px;max-width:560px}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.tab{padding:9px 20px;border-radius:999px;border:1px solid var(--line);background:var(--card);font:600 14px inherit;font-family:inherit;color:var(--muted);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--a);color:#fff;border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--sh)}
+.card h3{margin:0 0 6px;font-size:18px;word-break:break-word}.card p{margin:0;color:var(--muted);font-size:15px}
+.card small{color:var(--a);font-weight:600}
+.skh{display:flex;align-items:center;gap:14px;margin-bottom:16px}.skh h3{margin:0}
+.ti{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:var(--t);background:color-mix(in srgb,var(--t) 15%,transparent);font-weight:800;font-size:15px}
+.ti svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.meter{height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin-bottom:12px}.meter i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--a),var(--b))}
+.proj{display:flex;flex-direction:column;gap:12px}
+.proj .tags{display:flex;flex-wrap:wrap;gap:6px}
+.proj .tags span{font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--line);color:var(--muted)}
+.proj a{color:var(--a);font-weight:600;margin-top:auto}
+form{display:grid;gap:14px;max-width:560px}
+input,textarea{width:100%;padding:14px 18px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 22px 50px}
+@media (max-width:1100px){.bar{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:6px}#links{order:3;width:100%;overflow-x:auto;padding-bottom:8px}}
+@media (max-width:860px){.hero{grid-template-columns:1fr;padding-top:40px}.c1{left:0}.c2,.c3{right:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap bar">
+<a class="logo" href="#top" id="logo"></a><nav id="links" aria-label="Sections"></nav>
+<a class="btn pri sm" href="#contact">Contact</a>
+</div></header>
+
+<main id="top">
+<section class="wrap hero" id="cover">
+<div>
+<span class="avail"><i></i>Available for freelance projects</span>
+<h1>Hi, I'm <span class="grad" id="nm"></span></h1>
+<p class="typed"><span id="ty"></span><b class="caret"></b></p>
+<p class="bio" id="bio"></p>
+<div class="stats" id="stats"></div>
+<div class="cta"><a class="btn pri" href="#projects">View projects</a><a class="btn" href="#contact">Let's talk</a></div>
+<p class="conn" id="conn"></p>
+</div>
+<div class="visual">
+<div class="photo" id="photo"></div>
+<span class="chip c1" id="c1"></span><span class="chip c2" id="c2"></span><span class="chip c3" id="c3"></span>
+</div>
+</section>
+
+<section class="wrap sec" id="about">
+<h2>About</h2><p class="sub">The short version.</p>
+<div class="grid" id="aboutGrid"></div>
+</section>
+
+<section class="wrap sec" id="skills">
+<h2>Skills</h2><p class="sub">The tools I use to build and ship mobile apps.</p>
+<div class="tabs" id="tabs"></div><div class="grid" id="skillGrid"></div>
+</section>
+
+<section class="wrap sec" id="education">
+<h2>Education</h2><p class="sub">Where I study and train.</p>
+<div class="grid" id="eduGrid"></div>
+</section>
+
+<section class="wrap sec" id="experience">
+<h2>Experience</h2><p class="sub">Real projects I have worked on.</p>
+<div class="grid" id="expGrid"></div>
+</section>
+
+<section class="wrap sec" id="services">
+<h2>Services</h2><p class="sub">What you can hire me for.</p>
+<div class="grid" id="svcGrid"></div>
+</section>
+
+<section class="wrap sec" id="projects">
+<h2>Projects</h2><p class="sub">Selected work. Each one has the stack and the problem it solves.</p>
+<div class="grid" id="projGrid"></div>
+</section>
+
+<section class="wrap sec" id="contact">
+<h2>Tell me about your app</h2><p class="sub">Send a short brief. I reply within 24 hours.</p>
+<form id="form">
+<input name="n" placeholder="Your name" required aria-label="Your name">
+<input name="e" type="email" placeholder="Your email" required aria-label="Your email">
+<textarea name="m" rows="5" placeholder="What do you want to build?" required aria-label="Project brief"></textarea>
+<button class="btn pri" type="submit">Send message</button>
+</form>
+</section>
+</main>
+<footer id="foot"></footer>
+
+<script>
+/* ===== EDIT YOUR DATA HERE ===== */
+const C={
+ name:"Abdelrahman Hamed",
+ typed:["Flutter Developer","DEPI Initiative Participant","Computer Science at Mansoura University"],
+ bio:"Passionate about mobile application development, with hands-on experience contributing to real-world projects through the Digital Egypt Pioneers Initiative (DEPI). I collaborated on innovative solutions using Flutter, applying the skills I developed during intensive training. Currently pursuing my undergraduate degree in Computer Science at Mansoura University, where I'm building a strong foundation in software development and modern technologies.",
+ email:"abdulrahmanelkasaby@gmail.com",
+ linkedin:"https://www.linkedin.com/feed/",   // replace with your profile link
+ github:"https://github.com/",               // replace with your profile link
+ photo:"",               // put an image path or URL here, e.g. "me.jpg"
+ chips:["Flutter & Dart","DEPI","Mansoura University"],
+ stats:[],               // add real numbers later, e.g. [3,"+","Apps delivered"]
+ about:[["Focus","Flutter mobile development"],["Training","Digital Egypt Pioneers Initiative (DEPI)"],["University","Mansoura University"],["Email","abdulrahmanelkasaby@gmail.com"]],
+ education:[["Computer Science","Mansoura University","Undergraduate, in progress"],["Flutter training","Digital Egypt Pioneers Initiative (DEPI)","Intensive training program"]],
+ experience:[["Flutter contributor","DEPI","Collaborated on innovative solutions in real-world projects using Flutter."]],
+ skills:[   // [name, category, subtitle, level 0-100 (set your honest level), color, icon]
+  ["Flutter","Core Tech","Cross-Platform",85,"#5b7fa6","app"],
+  ["Dart","Core Tech","Object-Oriented",80,"#5b7fa6","code"],
+  ["C++","Core Tech","Programming Language",65,"#5b7fa6","T:C++"],
+  ["C#","Core Tech","Object-Oriented Programming",65,"#5b7fa6","T:C#"],
+  ["HTML/CSS & Bootstrap","Core Tech","Responsive Design",70,"#e8833a","layout"],
+  ["Clean Architecture","Architecture & State","Domain-Driven • Modular",70,"#5b7fa6","arch"],
+  ["BLoC & Cubit","Architecture & State","Predictable State Mgmt",75,"#d98ca0","bloc"],
+  ["Provider","Architecture & State","Dependency Injection",75,"#5b7fa6","prov"],
+  ["REST APIs (Dio)","Tools & AI","Network Interceptors & Caching",75,"#5b7fa6","cloud"],
+  ["Firebase","Tools & AI","Auth, Firestore & Messaging",70,"#e8833a","fire"],
+  ["TensorFlow Lite","Tools & AI","Offline On-Device AI",55,"#d98ca0","chip"],
+  ["Rive Animations","Tools & AI","Interactive Vector Motion",50,"#d98ca0","wand"],
+  ["Git & GitHub","Tools & AI","Version Control & Workflows",75,"#5b7fa6","git"]],
+ projects:[
+  ["Language App","Learning a language from scattered books and videos makes it hard to stay consistent. This app puts lessons and practice in one place on your phone.",["Flutter","Dart"],"#"],
+  ["PharmyTick","Pharmacists record out-of-stock medicines by going to a computer and typing them in by hand. With PharmyTick they scan the medicine QR code with the phone and log the shortage in seconds, then add it to an order.",["Flutter","REST API","QR Scanner"],"#"],
+  ["Task Manager App","Keeping track of daily tasks on paper or in scattered notes is easy to forget. This app lets you add tasks, set reminders and tick them off in one clean list.",["Flutter","BLoC"],"#"]],
+ services:[
+  ["Flutter mobile app","A complete iOS and Android app built from your idea."],
+  ["Design to Flutter","Turn your Figma or XD design into a working app screen by screen."],
+  ["API integration","Connect your app to your backend and show live data."],
+  ["Fixes and improvements","Fix bugs and clean up an existing Flutter app."]]
+};
+/* ===== END OF DATA ===== */
+const $=id=>document.getElementById(id),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const parts=C.name.split(" ");$("logo").innerHTML=parts[0]+' <span>.dev</span>';
+$("nm").textContent=C.name;$("bio").textContent=C.bio;
+document.title=C.name+" | Flutter Developer";
+const ic={home:"M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z",user:"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z",code:"M16 18l6-6-6-6M8 6l-6 6 6 6",edu:"M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5",job:"M3 8h18v12H3zM8 8V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3",svc:"M12 2l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 17l9 5 9-5",app:"M7 2h10a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zM11 18h2"};
+const nav=[["cover","Cover","home"],["about","About","user"],["skills","Skills","code"],["education","Education","edu"],["experience","Experience","job"],["services","Services","svc"],["projects","Projects","app"]];
+$("links").innerHTML=nav.map(n=>`<a href="#${n[0]}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ic[n[2]]}"/></svg>${n[1]}</a>`).join("");
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$("links").querySelectorAll("a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+nav.forEach(n=>spy.observe($(n[0])));
+$("aboutGrid").innerHTML=C.about.map(a=>`<div class="card"><small>${a[0]}</small><h3>${a[1]}</h3></div>`).join("");
+$("eduGrid").innerHTML=C.education.map(e=>`<div class="card"><small>${e[2]}</small><h3>${e[0]}</h3><p>${e[1]}</p></div>`).join("");
+$("expGrid").innerHTML=C.experience.map(e=>`<div class="card"><small>${e[1]}</small><h3>${e[0]}</h3><p>${e[2]}</p></div>`).join("");
+C.chips.forEach((t,i)=>$("c"+(i+1)).textContent=t);
+$("photo").innerHTML=C.photo?`<img src="${C.photo}" alt="${C.name}">`:parts.map(p=>p[0]).join("").slice(0,2).toUpperCase();
+$("stats").innerHTML=C.stats.map(s=>`<div class="stat"><b data-n="${s[0]}">${s[0]}</b><b><em>${s[1]}</em></b><span>${s[2]}</span></div>`).join("");
+$("stats").querySelectorAll(".stat").forEach(el=>{const b=el.children[0],t=+b.dataset.n;if(rm)return;let v=0;b.textContent=0;const step=()=>{v+=Math.max(1,t/40);if(v>=t){b.textContent=t}else{b.textContent=Math.floor(v);requestAnimationFrame(step)}};requestAnimationFrame(step)});
+const ik={app:"M7 2h10a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zM11 18h2",code:"M16 18l6-6-6-6M8 6l-6 6 6 6",layout:"M3 4h18v16H3zM3 9h18M9 9v11",arch:"M9 3h6v5H9zM3 16h6v5H3zM15 16h6v5h-6zM12 8v4M6 16v-4h12v4",bloc:"M10 3h4v4h-4zM6 9h4v4H6zM14 9h4v4h-4zM2 15h4v4H2zM10 15h4v4h-4zM18 15h4v4h-4z",prov:"M4 4h6v6H4zM14 14h6v6h-6zM7 10v7h7",cloud:"M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 20 11a4 4 0 0 1-1 7zM12 11v6M9 14l3 3 3-3",fire:"M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-3 0-6 1-9z",chip:"M5 5h14v14H5zM9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3",wand:"M4 20L16 8M15 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM19 12l1 2 2 1-2 1-1 2-1-2-2-1 2-1z",git:"M6 3v12M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9a9 9 0 0 1-9 9"};
+const ico=k=>k.startsWith("T:")?k.slice(2):`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ik[k]}"/></svg>`;
+function renderSkills(cat){$("skillGrid").innerHTML=C.skills.filter(s=>cat==="All"||s[1]===cat).map(s=>`<div class="card"><div class="skh"><span class="ti" style="--t:${s[4]}">${ico(s[5])}</span><h3>${s[0]}</h3></div><div class="meter"><i style="width:${s[3]}%"></i></div><p>${s[2]}</p></div>`).join("")}
+const cats=["All",...new Set(C.skills.map(s=>s[1]))];
+$("tabs").innerHTML=cats.map((c,i)=>`<button class="tab" aria-pressed="${i===0}" data-c="${c}">${c}</button>`).join("");
+$("tabs").onclick=e=>{const b=e.target.closest(".tab");if(!b)return;$("tabs").querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-pressed",t===b));renderSkills(b.dataset.c)};
+renderSkills("All");
+$("projGrid").innerHTML=C.projects.map(p=>`<div class="card proj"><h3>${p[0]}</h3><p>${p[1]}</p><div class="tags">${p[2].map(t=>`<span>${t}</span>`).join("")}</div><a href="${p[3]}">View project</a></div>`).join("");
+$("svcGrid").innerHTML=C.services.map(s=>`<div class="card"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
+$("conn").innerHTML=`<a href="${C.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="${C.github}" target="_blank" rel="noopener">GitHub</a><a href="mailto:${C.email}">Email</a>`;
+$("foot").textContent="© "+new Date().getFullYear()+" "+C.name;
+$("form").onsubmit=e=>{e.preventDefault();const f=e.target;location.href=`mailto:${C.email}?subject=${encodeURIComponent("Project brief from "+f.n.value)}&body=${encodeURIComponent(f.m.value+"\n\n"+f.n.value+" ("+f.e.value+")")}`};
+/* typing effect */
+let w=0,c=0,del=false;const ty=$("ty");
+if(rm){ty.textContent=C.typed[0]}else{(function tick(){const s=C.typed[w];ty.textContent=s.slice(0,c);
+ if(!del&&c===s.length){del=true;return setTimeout(tick,1600)}
+ if(del&&c===0){del=false;w=(w+1)%C.typed.length}
+ c+=del?-1:1;setTimeout(tick,del?35:70)})()}
+</script>
+</body>
+</html>
